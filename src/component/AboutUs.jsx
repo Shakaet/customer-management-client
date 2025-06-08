@@ -22,23 +22,24 @@ const AboutUs = () => {
 
   //  let {darkmode}=useContext(Context)
   // Core values data
-  const values = [
-    {
-      title: 'Innovation',
-      description: 'We leverage cutting-edge technology to simplify payroll processes.',
-      icon: '🚀',
-    },
-    {
-      title: 'Integrity',
-      description: 'Transparency and trust are at the heart of everything we do.',
-      icon: '🤝',
-    },
-    {
-      title: 'Customer Success',
-      description: 'Your success is our priority, with dedicated support 24/7.',
-      icon: '🌟',
-    },
-  ];
+ const values = [
+  {
+    title: 'Efficiency',
+    description: 'We streamline employee, task, and lead management to save your time and effort.',
+    icon: '⚙️',
+  },
+  {
+    title: 'Accountability',
+    description: 'Our system promotes transparency and clear responsibilities across your organization.',
+    icon: '📊',
+  },
+  {
+    title: 'User Focus',
+    description: 'Designed with user-friendly features and 24/7 support to help you succeed.',
+    icon: '🙌',
+  },
+];
+
 
 
   // Team data
@@ -79,10 +80,10 @@ const AboutUs = () => {
       transition={{ duration: 0.6 }}
     >
       <h1 className="text-5xl font-extrabold text-indigo-400 mb-10">
-        About Payroll
+        About ManageX
       </h1>
       <p className="text-lg text-gray-300 leading-relaxed">
-        PayrollPro is revolutionizing how businesses manage payroll. Since 2015, our mission has been to simplify payroll operations with secure, compliant, and user-friendly solutions. Backed by 10,000+ businesses globally, we fuse cutting-edge technology with expert support to empower teams of all sizes.
+        ManageX is revolutionizing how businesses ManageX. Since 2015, our mission has been to simplify ManageX operations with secure, compliant, and user-friendly solutions. Backed by 10,000+ businesses globally, we fuse cutting-edge technology with expert support to empower teams of all sizes.
       </p>
     </motion.div>
 
@@ -96,7 +97,7 @@ const AboutUs = () => {
       >
         <h3 className="text-2xl font-bold text-cyan-400 mb-4">Our Vision</h3>
         <p className="text-gray-300">
-          To become the world’s most trusted payroll partner—automating processes so businesses can focus on what truly matters.
+          To become the world’s most trusted ManageX partner—automating processes so businesses can focus on what truly matters.
         </p>
       </motion.div>
 
@@ -108,7 +109,7 @@ const AboutUs = () => {
       >
         <h3 className="text-2xl font-bold text-cyan-400 mb-4">Our Mission</h3>
         <p className="text-gray-300">
-          Empower companies with reliable, fast, and secure payroll systems through seamless automation and personalized support.
+          Empower companies with reliable, fast, and secure ManageX systems through seamless automation and personalized support.
         </p>
       </motion.div>
     </div>
@@ -120,9 +121,9 @@ const AboutUs = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <h2 className="text-3xl md:text-4xl font-bold text-indigo-400 mb-6">Why Choose PayrollPro?</h2>
+      <h2 className="text-3xl md:text-4xl font-bold text-indigo-400 mb-6">Why Choose ManageX?</h2>
       <p className="text-gray-300 max-w-3xl mx-auto">
-        We simplify complexity with smart automation, offer 24/7 support, and maintain the highest security standards—making payroll stress-free and scalable.
+        We simplify complexity with smart automation, offer 24/7 support, and maintain the highest security standards—making ManageX stress-free and scalable.
       </p>
     </motion.div>
 

@@ -60,7 +60,7 @@ const StarRating = ({ rating }) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      Employee Reviews
+      Executives Reviews
     </motion.h1>
 
     <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">

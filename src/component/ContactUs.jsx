@@ -126,7 +126,7 @@ const ContactUs = () => {
             <li className="flex items-center">
               <span className="mr-2">📧</span>
               <a href="mailto:support@payrollpro.com" className="hover:text-blue-400 transition">
-                support@payrollpro.com
+                support@ManageX.com
               </a>
             </li>
             <li className="flex items-center">
@@ -137,7 +137,7 @@ const ContactUs = () => {
             </li>
             <li className="flex items-center">
               <span className="mr-2">📍</span>
-              123 Business Ave, Suite 100, Payroll City, PC 12345
+              123 Business Ave, Suite 100, ManageX, PC 12345
             </li>
           </ul>
         </div>

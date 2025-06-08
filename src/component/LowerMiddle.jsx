@@ -7,24 +7,28 @@ import Marquee from 'react-fast-marquee';
 import { FaMoneyCheckAlt, FaFileInvoiceDollar, FaUserTie, FaChartPie, FaCalendarCheck, FaShieldAlt } from 'react-icons/fa';
 const testimonials = [
   {
-    name: "Sarah Thompson",
-    role: "HR Manager, TechNova Ltd.",
-    comment: "This payroll system has transformed how we manage salaries and compliance. It’s fast, reliable, and beautifully designed.",
-    img: "https://i.pravatar.cc/150?img=47",
+    name: "Nahid Hasan",
+    role: "Admin, TaskFlow BD",
+    comment:
+      "This system has been a game-changer for our admin team. Managing users and employees is now fully automated and effortless.",
+    img: "https://i.pravatar.cc/150?img=15",
   },
   {
-    name: "Michael Lee",
-    role: "Founder, FinPilot Inc.",
-    comment: "Automation and tax handling used to be a nightmare. Now it takes minutes. Highly recommended!",
-    img: "https://i.pravatar.cc/150?img=36",
+    name: "Sharmin Akter",
+    role: "HR Manager, NextGen Solutions",
+    comment:
+      "Employee salaries, task tracking, and lead management — all in one place. We've saved so much time and effort. Highly recommended!",
+    img: "https://i.pravatar.cc/150?img=30",
   },
   {
-    name: "Amina Rahman",
-    role: "Payroll Head, UrbanWorks",
-    comment: "Sleek UI, smooth experience, and excellent support. The best investment for any growing business.",
-    img: "https://i.pravatar.cc/150?img=18",
+    name: "Tariq Mahmood",
+    role: "Team Lead, SwiftTech Ltd.",
+    comment:
+      "The dashboard gives us a clear overview of the team’s progress. Task management has never been this smooth and efficient.",
+    img: "https://i.pravatar.cc/150?img=23",
   },
 ];
+
 
 const icons = [
     { icon: <FaMoneyCheckAlt />, label: "Salary Automation" },
@@ -78,7 +82,7 @@ const LowerMiddle = () => {
             Our Mission
           </h2>
           <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-            Empower businesses with a seamless, secure, and intelligent payroll
+            Empower businesses with a seamless, secure, and intelligent ManageX
             management solution that reduces workload and boosts accuracy.
           </p>
 
@@ -89,7 +93,7 @@ const LowerMiddle = () => {
               <div>
                 <h4 className="text-xl font-semibold">Precision First</h4>
                 <p className="text-gray-400">
-                  We aim to eliminate manual errors and ensure 100% accurate salary processing.
+                  We aim to eliminate manual errors and ensure 100% accurate FollowUp processing.
                 </p>
               </div>
             </div>
@@ -107,7 +111,7 @@ const LowerMiddle = () => {
               <div>
                 <h4 className="text-xl font-semibold">Growth Focused</h4>
                 <p className="text-gray-400">
-                  We help you focus on business while we automate your payroll workflow.
+                  We help you focus on business while we automate your ManageX workflow.
                 </p>
               </div>
             </div>

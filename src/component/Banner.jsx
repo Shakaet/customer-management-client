@@ -24,19 +24,19 @@ const Banner = () => {
 
   const slides = [
     {
-      title: "Streamline Your Payroll Process",
+      title: "Streamline Your ManageX Process",
       description: "Effortlessly manage employee salaries, taxes, and benefits with our intuitive platform.",
       image: "https://i.ibb.co/xKHxFjZh/vecteezy-hand-touching-infographic-cloud-computing-and-technology-10823369.jpg",
       cta: "Get Started Now",
     },
     {
-      title: "Secure & Compliant Payroll",
+      title: "Secure & Compliant ManageX",
       description: "Ensure compliance with tax laws and keep your data safe with top-tier security.",
       image: "https://i.ibb.co/S4vKJRpj/vecteezy-hand-touching-infographic-cloud-computing-and-technology-10811806.jpg",
       cta: "Learn More",
     },
     {
-      title: "Real-Time Payroll Insights",
+      title: "Real-Time ManageX Insights",
       description: "Access detailed reports and analytics to make informed financial decisions.",
       image: "https://i.ibb.co/prR2nfrF/vecteezy-digital-transformation-technology-strategy-digitization-and-16850486.jpg",
       cta: "Explore Features",
@@ -109,13 +109,13 @@ const Banner = () => {
   };
 
   const iconStyles = [
-    { color: '#FF6B6B', label: "Salary Automation" },       // bright red
-    { color: '#4ECDC4', label: "Tax & Compliance" },        // teal
-    { color: '#FFD93D', label: "Employee Management" },     // yellow
-    { color: '#1A535C', label: "Reports & Analytics" },     // dark cyan
-    { color: '#FF9F1C', label: "Attendance Tracking" },     // orange
-    { color: '#6A0572', label: "Secure Access" },           // purple
-  ];
+  { color: '#FF6B6B', label: "User Management" },           // bright red
+  { color: '#4ECDC4', label: "Role Assignment" },           // teal
+  { color: '#FFD93D', label: "Access Control" },            // yellow
+  { color: '#1A535C', label: "Activity Logs" },             // dark cyan
+  { color: '#FF9F1C', label: "Admin Dashboard" },           // orange
+  { color: '#6A0572', label: "Authentication Security" }    // deep purple
+]
   
   const icons = [
     FaMoneyCheckAlt,

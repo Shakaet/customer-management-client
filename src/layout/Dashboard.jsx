@@ -84,7 +84,7 @@ const Dashboard = () => {
         }
 
         {
-          isemployee &&  <h2 className="text-2xl font-semibold text-center text-yellow-400">Employee Panel</h2>
+          isemployee &&  <h2 className="text-2xl font-semibold text-center text-yellow-400">Executive Panel</h2>
         }
         {
         !isAdmin && !isemployee && (
@@ -114,26 +114,14 @@ const Dashboard = () => {
 
           {isAdmin &&   <>
               
-              <Link to="/dashboard/addnewemployee" onClick={closeSidebar} className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-700 transition">
-                <IoIosPersonAdd  className="text-blue-400" />
-                <span>Add new Employee</span>
-              </Link>
               
-              <Link to="/dashboard/managenewemployee" onClick={closeSidebar} className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-700 transition">
-                <MdManageAccounts className="text-blue-400" />
-                <span>Manage Employee</span>
-              </Link>
-              <Link to="/dashboard/attendenceform" onClick={closeSidebar} className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-700 transition">
-              <MdBookmarkAdded className="text-blue-400" />
-                <span>Add Attendence Form</span>
-              </Link>
+              
+              
+              
  
 
-              <Link to="/dashboard/allattendence" onClick={closeSidebar} className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-700 transition">
-              <MdAttribution className="text-blue-400" />
-                <span>Employee's Attendence</span>
-              </Link>
-              <Link to="/dashboard/addTask" onClick={closeSidebar} className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-700 transition">
+              
+              <Link to="/dashboard/addtask" onClick={closeSidebar} className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-700 transition">
               <MdAddTask className="text-blue-400" />
                 <span>Add Task</span>
               </Link>
@@ -141,18 +129,24 @@ const Dashboard = () => {
                 <SiManageiq  className="text-blue-400" />
                 <span>Manage Task</span>
               </Link>
+              <Link to="/dashboard/manageLead" onClick={closeSidebar} className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-700 transition">
+              <MdBookmarkAdded className="text-blue-400" />
+                <span>Manage Lead</span>
+              </Link>
+              <Link to="/dashboard/manageFollowUp" onClick={closeSidebar} className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-700 transition">
+                <IoIosPersonAdd  className="text-blue-400" />
+                <span>Manage FollowUp</span>
+              </Link>
+               <Link to="/dashboard/manageTicket" onClick={closeSidebar} className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-700 transition">
+              <MdAttribution className="text-blue-400" />
+                <span>Manage Ticket</span>
+              </Link>
 
-              <Link to="/dashboard/leaveaplication" onClick={closeSidebar} className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-700 transition">
-                <FaChartLine className="text-blue-400" />
-                <span>Leaving Application</span>
-              </Link>
-              <Link to="/dashboard/paymentHistory" onClick={closeSidebar} className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-700 transition">
-                <RiSecurePaymentLine className="text-blue-400" />
-                <span>Payment History</span>
-              </Link>
-              <Link to="/dashboard/findEmployees" onClick={closeSidebar} className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-700 transition">
+             
+              
+              <Link to="/dashboard/activityLog" onClick={closeSidebar} className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-700 transition">
                 <MdFindInPage  className="text-blue-400" />
-                <span>Find Employee</span>
+                <span>Activity Log</span>
               </Link>
              
               
@@ -161,35 +155,41 @@ const Dashboard = () => {
             </>}
 
             {isemployee &&  <>
-                <Link to="/dashboard/myattendence" onClick={closeSidebar} className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-700 transition">
-                <MdAttribution className="text-blue-400" />
-                <span>My Attendence</span>
-              </Link>
-              <Link to="/dashboard/myTask" onClick={closeSidebar} className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-700 transition">
+                
+              <Link to="/dashboard/mytask" onClick={closeSidebar} className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-700 transition">
                 <MdTaskAlt className="text-blue-400" />
                 <span>My Task</span>
               </Link>
 
-              <Link to="/dashboard/dailyupdates" onClick={closeSidebar} className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-700 transition">
+              <Link to="/dashboard/addalead" onClick={closeSidebar} className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-700 transition">
                 <MdOutlineBrowserUpdated className="text-blue-400" />
-                <span>Daily Updates</span>
+                <span>Add a Lead</span>
               </Link>
-              <Link to="/dashboard/createToken" onClick={closeSidebar} className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-700 transition">
-                
-                <FaRegStopCircle className="text-blue-400" />
-                <span>Create Token</span>
+              <Link to="/dashboard/mylead" onClick={closeSidebar} className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-700 transition">
+                <MdOutlineBrowserUpdated className="text-blue-400" />
+                <span>My Added Lead</span>
               </Link>
+              <Link to="/dashboard/addFollowUp" onClick={closeSidebar} className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-700 transition">
+                <MdOutlineBrowserUpdated className="text-blue-400" />
+                <span>Add Followup</span>
+              </Link>
+               <Link to="/dashboard/myfollowUps" onClick={closeSidebar} className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-700 transition">
+                <MdOutlineBrowserUpdated className="text-blue-400" />
+                <span>My Followup</span>
+              </Link>
+              <Link to="/dashboard/addraiseticket" onClick={closeSidebar} className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-700 transition">
+                <MdOutlineBrowserUpdated className="text-blue-400" />
+                <span>Raise Ticket</span>
+              </Link>
+              <Link to="/dashboard/myaddedticket" onClick={closeSidebar} className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-700 transition">
+                <MdOutlineBrowserUpdated className="text-blue-400" />
+                <span>My Added Ticket</span>
+              </Link>
+              
+             
+              
 
-              <Link to="/dashboard/livingreq" onClick={closeSidebar} className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-700 transition">
-                <FaChartLine className="text-blue-400" />
-                <span> Leave Request</span>
-              </Link>
-              <Link to="/dashboard/myPaymentHistory" onClick={closeSidebar} className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-700 transition">
-                <MdTaskAlt className="text-blue-400" />
-                <span>My Payment History</span>
-              </Link>
-
-               <Link to="/dashboard/adreview" onClick={closeSidebar} className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-700 transition">
+               <Link to="/dashboard/addreview" onClick={closeSidebar} className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-700 transition">
                 <RiSecurePaymentLine className="text-blue-400" />
                 <span>Add Review</span>
               </Link>

@@ -73,25 +73,32 @@ const NewHomePageSections = () => {
   let {darkmode}=useContext(Context)
 
   const successStories = [
-    {
-      title: "TechStartup Saves 20 Hours Weekly",
-      description: "By automating payroll with PayrollPro, TechStartup reduced processing time and eliminated errors.",
-      company: "TechStartup Inc.",
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-    },
-    {
-      title: "Retail Chain Streamlines Compliance",
-      description: "PayrollPro ensured RetailWorld stayed compliant with complex tax regulations across multiple states.",
-      company: "RetailWorld",
-      image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-    },
-    {
-      title: "Nonprofit Boosts Efficiency",
-      description: "CharityOrg used PayrollPro’s reporting tools to optimize budgeting and focus on their mission.",
-      company: "CharityOrg",
-      image: "https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-    },
-  ];
+  {
+    title: "Boosted Productivity by 30%",
+    description:
+      "With the Customer Management System, BrightSoft automated task assignments and improved team productivity across all departments.",
+    company: "BrightSoft Solutions",
+    image:
+      "https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    title: "Streamlined Employee Oversight",
+    description:
+      "Using centralized employee management and performance tracking, TaskFleet reduced manual errors and HR workload significantly.",
+    company: "TaskFleet Corp.",
+    image:
+      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+  },
+  {
+    title: "Lead Conversion Increased by 45%",
+    description:
+      "Lead tracking and follow-up automation helped GrowthX close more deals in less time, driving consistent business growth.",
+    company: "GrowthX Agency",
+    image:
+      "https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+  },
+];
+
 
   // Auto-slide for success stories every 6 seconds
   useEffect(() => {

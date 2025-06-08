@@ -2,6 +2,16 @@ import { motion } from "framer-motion";
 import {
   FaMoneyCheckAlt,
   FaUsersCog,
+  FaUserShield,
+  FaChartPie ,
+  FaTable,
+  FaHistory,
+  FaEdit,
+  
+  
+  
+  
+  
   FaChartLine,
   FaLock,
   FaMobileAlt,
@@ -10,10 +20,10 @@ import {
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
-import { Briefcase, DollarSign, FileText, ShieldCheck } from 'lucide-react';
+import { Briefcase, DollarSign, FileText, ShieldCheck,BarChart2 } from 'lucide-react';
 import { Users, BarChart4, AlarmClock } from 'lucide-react';
 import 'aos/dist/aos.css';
-import dashboard from "../assets/dash.png"
+import dashboard from "../assets/das.png"
 import { Link } from "react-router-dom";
 
 const featuress = [
@@ -46,62 +56,64 @@ const featuress = [
 
 const steps = [
   {
-    icon: <FileText size={50} className="text-cyan-400 mb-4" />,
-    title: "Step 1: Add Employees",
-    desc: "Easily onboard employees with all necessary payroll details.",
+    icon: <FileText size={50} className="text-indigo-400 mb-4" />,
+    title: "Step 1: Add Users",
+    desc: "Register new users with their basic info and profile photo.",
   },
   {
-    icon: <DollarSign size={50} className="text-cyan-400 mb-4" />,
-    title: "Step 2: Set Salary & Taxes",
-    desc: "Customize salary structures and tax rules per employee or role.",
+    icon: <Briefcase size={50} className="text-indigo-400 mb-4" />,
+    title: "Step 2: Assign Roles",
+    desc: "Set user roles such as admin or executive based on responsibility.",
   },
   {
-    icon: <Briefcase size={50} className="text-cyan-400 mb-4" />,
-    title: "Step 3: Process Payroll",
-    desc: "Generate pay slips, auto-calculate payments, deductions, and bonuses.",
+    icon: <ShieldCheck size={50} className="text-indigo-400 mb-4" />,
+    title: "Step 3: Secure Access",
+    desc: "Ensure secure login and access control with role-based protection.",
   },
   {
-    icon: <ShieldCheck size={50} className="text-cyan-400 mb-4" />,
-    title: "Step 4: Secure & Report",
-    desc: "Securely store payroll history in the cloud.",
+    icon: <BarChart2 size={50} className="text-indigo-400 mb-4" />,
+    title: "Step 4: Monitor Activities",
+    desc: "Track user updates and generate real-time role change reports.",
   },
 ];
+
 
 
 
 
 const features = [
   {
-    icon: <FaMoneyCheckAlt className="text-6xl text-yellow-400 mb-4" />,
-    title: "Automated Payroll",
-    description: "Pay salaries, bonuses, and deductions without lifting a finger.",
+    icon: <FaUsersCog className="text-6xl text-blue-500 mb-4" />,
+    title: "User Role Management",
+    description: "Easily assign and update admin or executive roles for users.",
   },
   {
-    icon: <FaUsersCog className="text-6xl text-green-400 mb-4" />,
-    title: "Employee Management",
-    description: "Manage employee profiles, roles, leaves and more from one place.",
+    icon: <FaUserShield className="text-6xl text-purple-500 mb-4" />,
+    title: "Secure Authentication",
+    description: "Protect user data with secure login and role-based access.",
   },
   {
-    icon: <FaChartLine className="text-6xl text-blue-400 mb-4" />,
-    title: "Smart Reports",
-    description: "Visualize salary, tax, and attendance data with one click.",
+    icon: <FaTable className="text-6xl text-green-500 mb-4" />,
+    title: "Dynamic User Table",
+    description: "View and manage user data in an organized, sortable format.",
   },
   {
-    icon: <FaLock className="text-6xl text-red-400 mb-4" />,
-    title: "Bank-Grade Security",
-    description: "Your payroll data is encrypted and 100% secure.",
+    icon: <FaHistory className="text-6xl text-yellow-500 mb-4" />,
+    title: "Activity Logs",
+    description: "Track user actions and role changes in real-time.",
   },
   {
-    icon: <FaMobileAlt className="text-6xl text-purple-400 mb-4" />,
-    title: "Mobile Friendly",
-    description: "Access the system anytime, anywhere with mobile responsiveness.",
+    icon: <FaEdit className="text-6xl text-pink-500 mb-4" />,
+    title: "Live Role Updates",
+    description: "Change user roles instantly with live database updates.",
   },
   {
-    icon: <FaClock className="text-6xl text-pink-400 mb-4" />,
-    title: "24/7 Access",
-    description: "Process payrolls and view reports any time, day or night.",
+    icon: <FaChartPie className="text-6xl text-red-500 mb-4" />,
+    title: "Analytics Ready",
+    description: "Integrate reporting and visualize user distribution with ease.",
   },
 ];
+
 const MiddleSection = () => {
 
     useEffect(() => {
@@ -129,10 +141,10 @@ const MiddleSection = () => {
         className="text-center mb-20"
       >
         <h2 className="text-4xl md:text-5xl font-extrabold text-indigo-400">
-          Why Choose Our Payroll System?
+          Why Choose Our ManageX System?
         </h2>
         <p className="text-gray-400 mt-5 max-w-3xl mx-auto text-lg">
-          Streamline your HR and payroll operations with modern, secure, and scalable features designed for every business.
+          Streamline your HR and ManageX operations with modern, secure, and scalable features designed for every business.
         </p>
       </motion.div>
 
@@ -215,7 +227,7 @@ const MiddleSection = () => {
       Everything You Need in One Powerful Dashboard
     </h2>
     <p className="text-gray-400 mt-6 max-w-3xl mx-auto text-lg">
-      Say goodbye to spreadsheets and scattered HR systems. Our all-in-one payroll platform gives you the control, clarity, and automation your team deserves.
+      Say goodbye to spreadsheets and scattered HR systems. Our all-in-one ManageX platform gives you the control, clarity, and automation your team deserves.
     </p>
   </motion.div>
 
@@ -227,23 +239,20 @@ const MiddleSection = () => {
       className="space-y-10"
     >
       {[
-        {
-          title: "Automated Salary Disbursement",
-          desc: "Schedule salary payments with tax, bonuses, and deductions calculated for you — accurate, timely, and error-free.",
-        },
-        {
-          title: "Employee Self-Service Portal",
-          desc: "Give employees access to their payslips, tax documents, and leave balances — all in one place.",
-        },
-        {
-          title: "Dynamic Tax & Compliance Handling",
-          desc: "Our system stays up-to-date with local tax laws and compliance requirements automatically.",
-        },
-        {
-          title: "Advanced Reporting & Insights",
-          desc: "Visual dashboards, analytics, and downloadable reports help you make informed payroll decisions.",
-        },
-      ].map((item, i) => (
+  
+  {
+    title: "Employee Dashboard Access",
+    desc: "Employees can view payslips, tax files, and leave balances — anytime, from anywhere.",
+  },
+  {
+    title: "Auto Tax & Compliance Updates",
+    desc: "Stay compliant with ever-changing tax rules through automatic system updates.",
+  },
+  {
+    title: "Real-Time Reports & Analytics",
+    desc: "Access insightful dashboards and exportable reports for smart payroll decisions.",
+  },
+].map((item, i) => (
         <motion.div
           key={i}
           initial={{ opacity: 0, x: -20 }}
@@ -288,7 +297,7 @@ const MiddleSection = () => {
   >
     <h3 className="text-3xl font-bold text-white mb-4">Ready to Experience It Yourself?</h3>
     <p className="text-gray-400 mb-8 max-w-xl mx-auto">
-      Empower your team and simplify payroll today. Try PayrollPro and see the difference.
+      Empower your team and simplify ManageX today. Try ManageX and see the difference.
     </p>
     <a
       href="#"

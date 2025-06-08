@@ -16,6 +16,7 @@ import useTask from '../hook/useTask';
 import useemployeeCount from '../hook/useemployeeCount';
 import axios from 'axios';
 import { useQuery } from '@tanstack/react-query';
+import useLead from '../hook/useLead';
 
 const fetchUsers = async () => {
   const response = await axios.get(`http://localhost:3000/paymentDetails`);
@@ -30,6 +31,7 @@ const DashboardHome = () => {
   let [admin] = useAdminCount();
   let [users] = useUser();
   let [task] = useTask();
+  let [lead] = useLead();
 
   const { data: paymentSalary = [] } = useQuery({
     queryKey: ["paymentSalary"],
@@ -74,11 +76,12 @@ const DashboardHome = () => {
       color: '',
     },
     {
-      title: 'Total Salary Pay',
-      value: `${totalSalary} ৳`,
-      icon: '💳',
+      title: 'Total Leads',
+      value: lead.length,
+      icon: '📋',
       color: '',
     },
+    
   ];
 
   // Prepare data for the user role bar chart
@@ -283,18 +286,7 @@ const DashboardHome = () => {
               <Bar data={taskChartData} options={taskChartOptions} />
             </motion.div>
           </div>
-          <div className="w-1/2 mx-auto gap-4">
-            <motion.div
-              className="bg-white border-black border-2 text-white p-6 rounded-lg shadow-lg"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-            >
-               <Bar data={salaryChartData} options={salaryChartOptions} />
-             
-            </motion.div>
-           
-          </div>
+         
         </div>
       </section>
     </div>
