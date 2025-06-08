@@ -13,14 +13,7 @@ Built using **React**, **Vite**, **Tailwind CSS**, **Firebase**, and **Express.j
 ---
 
 
-- View & edit personal profile
-- Mark daily attendance within allowed time
-- Submit daily task updates (with email notifications)
-- Submit & track leave requests
-- View assigned tasks and deadlines
-- Submit feedback through review forms
-- View salary payment history
-- Enjoy responsive UI with dark/light mode
+
 
 ---
 
