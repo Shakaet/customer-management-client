@@ -1,33 +1,18 @@
-# 💼 **Payroll Management System**
+# 💼 **Customer Management System**
 
-Welcome to the **Payroll Management System**! 📊  
-An advanced web-based platform designed to streamline payroll, employee attendance, and task management through a modern, secure, and responsive interface.
+Welcome to the **Customer Management System**! 📊  
+An advanced web-based platform designed to streamline customer data management, interaction tracking, and service coordination through a modern, secure, and responsive interface.
 
-## 🌐 **Live Demo**
-🚀 [Click here to explore the live site](https://gilded-centaur-ce11bb.netlify.app/) 
 
 ## 📝 **Description**
 
-**Payroll Management System** is a feature-rich, role-based web application tailored for Admins and Employees. It simplifies the management of employee details, attendance tracking, task assignments, leave requests, daily updates, and salary payments using Stripe.
+**Customer Management System** is a feature-rich, role-based web application tailored for Admins and Support Agents. It simplifies the management of customer profiles, interaction history, service requests, support tickets, feedback tracking, and real-time updates — all through an intuitive and secure interface.
 
 Built using **React**, **Vite**, **Tailwind CSS**, **Firebase**, and **Express.js**, the system ensures seamless performance, data security with **JWT**, and professional UI/UX.
 
 ---
 
-## 🔑 **Core Features**
 
-### 👨‍💼 Admin Panel
-- Add, update, and delete employee records
-- Share attendance forms (defaults to Absent)
-- View & manage daily attendance reports
-- Assign tasks with deadlines
-- Process and track salary payments via Stripe
-- View payment history & salary analytics (charts)
-- Approve or decline leave requests
-- Receive daily updates via email
-- Manage user roles and secure dashboard routes
-
-### 👩‍💼 Employee Panel
 - View & edit personal profile
 - Mark daily attendance within allowed time
 - Submit daily task updates (with email notifications)
@@ -70,15 +55,15 @@ To run the project locally, follow these steps:
 
 1. **Clone the Client repository:**
    ```bash
-   git clone https://github.com/Shakaet/Payroll-Management-Client
-   git clone https://github.com/Shakaet/Payroll-Management-Server
-   cd Payroll-Management-Client
+   git clone https://github.com/Shakaet/Customer-Management-Client
+   git clone https://github.com/Shakaet/Customer-Management-Server
+   cd Customer-Management-Client
    npm install
    npm run dev
 
 2. **Clone the Server repository:**
    ```bash
-   cd ../Payroll-Management-Server
+   cd ../Customer-Management-Server
    npm install
    nodemon index.js
 
