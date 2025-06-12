@@ -8,10 +8,15 @@ import moon from "../assets/moon.svg"
 import { useContext } from "react";
 import { Context } from "../provider/AuthProvider";
 import Toogle from "./Toogle";
+import useAdmin from "../hook/useAdmin";
+import useEmployee from "../hook/useEmployee";
 
 const AnimatedNavbar = ({ user, handleLogout }) => {
 
   // bg-gradient-to-r from-[#1A202C] to-[#2D3748]
+
+  let [isAdmin,adminLoading]= useAdmin()
+  let [isemployee,employeeLoading]=useEmployee()
   
   return (
     <motion.div 
@@ -53,7 +58,13 @@ const AnimatedNavbar = ({ user, handleLogout }) => {
               <li><Link to="/contactus" className="hover:text-blue-300">Contact Us</Link></li>
               <li><Link to="/aboutus" className="hover:text-blue-300">About Us</Link></li>
               <li><Link to="/reviews" className="hover:text-blue-300">All Reviews</Link></li>
-              <li><Link to="/dashboard" className="hover:text-blue-300">Dashboard</Link></li>
+              {
+                isAdmin && <li><Link to="/dashboard/A" className="hover:text-blue-300">Dashboard</Link></li>
+              }
+              {
+                isemployee && <li><Link to="/dashboard/E" className="hover:text-blue-300">Dashboard</Link></li>
+              }
+              
               
             </Fade>
           </ul>
@@ -73,7 +84,12 @@ const AnimatedNavbar = ({ user, handleLogout }) => {
             <li><Link to="/contactus" className="hover:text-blue-300 transition">Contact Us</Link></li>
             <li><Link to="/aboutus" className="hover:text-blue-300 transition">About Us</Link></li>
             <li><Link to="/reviews" className="hover:text-blue-300 transition">All Reviews</Link></li>
-            <li><Link to="/dashboard" className="hover:text-blue-300 transition">Dashboard</Link></li>
+             {
+                isAdmin && <li><Link to="/dashboard/A" className="hover:text-blue-300">Dashboard</Link></li>
+              }
+              {
+                isemployee && <li><Link to="/dashboard/E" className="hover:text-blue-300">Dashboard</Link></li>
+              }
             
           </Fade>
         </ul>

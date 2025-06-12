@@ -54,81 +54,79 @@ const ManageTask = () => {
 
     
   return (
-   <div>
+  <div>
+  <motion.div
+    className="max-w-6xl mx-auto mt-10 p-4 bg-white rounded-xl shadow-lg"
+    initial={{ opacity: 0, y: 50 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5 }}
+  >
+    <h2 className="text-2xl font-bold text-center text-blue-600 mb-6">
+      Manage All Assigned Tasks
+    </h2>
 
-    <motion.div
-      className="max-w-6xl mx-auto mt-10 p-4"
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      <h2 className="text-3xl font-semibold text-center mb-6 text-indigo-400">
-        Manage All Assigned Tasks
-      </h2>
-
-      <div className="overflow-x-auto rounded-lg shadow-lg border border-gray-200">
-        <table className="min-w-full divide-y divide-gray-200 bg-white">
-          <thead className="bg-blue-600 text-white">
+    <div className="overflow-x-auto">
+      <table className="min-w-full text-sm text-left border border-gray-200">
+        <thead className="bg-gray-100 text-gray-700 font-semibold">
+          <tr>
+            <th className="py-3 px-4 border">#</th>
+            <th className="py-3 px-4 border">Email</th>
+            <th className="py-3 px-4 border">Title</th>
+            <th className="py-3 px-4 border">Description</th>
+            <th className="py-3 px-4 border">Deadline</th>
+            <th className="py-3 px-4 border">Status</th>
+            <th className="py-3 px-4 border text-center">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {task.length === 0 ? (
             <tr>
-              <th className="py-3 px-4 text-left">#</th>
-              <th className="py-3 px-4 text-left">Email</th>
-              <th className="py-3 px-4 text-left">Title</th>
-              <th className="py-3 px-4 text-left">Description</th>
-              <th className="py-3 px-4 text-left">Deadline</th>
-              <th className="py-3 px-4 text-left">Status</th>
-              <th className="py-3 px-4 text-center">Actions</th>
+              <td colSpan="7" className="py-6 text-center text-gray-500">
+                No tasks found.
+              </td>
             </tr>
-          </thead>
-          <tbody className="divide-y divide-gray-100">
-            {task.length === 0 ? (
-              <tr>
-                <td colSpan="7" className="py-6 text-center text-gray-500">
-                  No tasks found.
+          ) : (
+            task.map((task, index) => (
+              <tr key={task._id} className="hover:bg-gray-50 transition">
+                <td className="py-3 px-4 border">{index + 1}</td>
+                <td className="py-3 px-4 border">{task.email}</td>
+                <td className="py-3 px-4 border">{task.title}</td>
+                <td className="py-3 px-4 border">{task.description}</td>
+                <td className="py-3 px-4 border">{task.deadline}</td>
+                <td className="py-3 px-4 border">
+                  <span
+                    className={`px-2 py-1 text-sm rounded-full ${
+                      task.status === "Pending"
+                        ? "bg-yellow-100 text-yellow-800"
+                        : "bg-green-100 text-green-800"
+                    }`}
+                  >
+                    {task.status}
+                  </span>
+                </td>
+                <td className="py-3 px-4 border text-center space-x-2 flex items-center">
+                  <Link
+                    to={`/dashboard/updateTask/${task._id}`}
+                    className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded"
+                  >
+                    Update
+                  </Link>
+                  <button
+                    onClick={() => handleDelete(task._id)}
+                    className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded"
+                  >
+                    Delete
+                  </button>
                 </td>
               </tr>
-            ) : (
-              task.map((task, index) => (
-                <tr key={task._id} className="hover:bg-gray-50 transition">
-                  <td className="py-3 px-4">{index + 1}</td>
-                  <td className="py-3 px-4">{task.email}</td>
-                  <td className="py-3 px-4">{task.title}</td>
-                  <td className="py-3 px-4">{task.description}</td>
-                  <td className="py-3 px-4">{task.deadline}</td>
-                  <td className="py-3 px-4">
-                    <span
-                      className={`px-2 py-1 text-sm rounded-full ${
-                        task.status === "Pending"
-                          ? "bg-yellow-100 text-yellow-800"
-                          : "bg-green-100 text-green-800"
-                      }`}
-                    >
-                      {task.status}
-                    </span>
-                  </td>
-                  <td className="py-3 px-4 flex justify-center space-x-2">
-                    <Link to={`/dashboard/updateTask/${task._id}`}
-                      
-                      className="px-3 py-1 text-sm bg-blue-500 text-white rounded hover:bg-blue-600"
-                    >
-                      Update
-                    </Link>
-                    <button
-                      onClick={() => handleDelete(task._id)}
-                      className="px-3 py-1 text-sm bg-red-500 text-white rounded hover:bg-red-600"
-                    >
-                      Delete
-                    </button>
-                  </td>
-                </tr>
-              ))
-            )}
-          </tbody>
-        </table>
-      </div>
-    </motion.div>
+            ))
+          )}
+        </tbody>
+      </table>
+    </div>
+  </motion.div>
+</div>
 
-
-   </div>
   )
 }
 

@@ -49,6 +49,7 @@ import ManageFollowUp from './routes/ManageFollowUp.jsx';
 import ManageTicket from './routes/ManageTicket.jsx';
 import ActivityLog from './routes/ActivityLog.jsx';
 import AddReview from './routes/AddReview.jsx';
+import DashboardE from './routes/DashboardE.jsx';
 
 
 const router = createBrowserRouter([
@@ -90,8 +91,13 @@ const router = createBrowserRouter([
     children:[
 
       {
-        path:"/dashboard",
+        path:"/dashboard/A",
         element:<DashboardHome></DashboardHome>
+
+      },
+      {
+        path:"/dashboard/E",
+        element:<DashboardE></DashboardE>
 
       },
       {
@@ -113,7 +119,7 @@ const router = createBrowserRouter([
       },
       {
         path:"/dashboard/manageFollowUp",
-        element:<AdminRoutes><ManageFollowUp></ManageFollowUp>></AdminRoutes>
+        element:<AdminRoutes><ManageFollowUp></ManageFollowUp></AdminRoutes>
       },
       {
         path:"/dashboard/manageTicket",

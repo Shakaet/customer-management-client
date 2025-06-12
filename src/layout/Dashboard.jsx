@@ -102,13 +102,25 @@ const Dashboard = () => {
         
         
         <nav className="flex flex-col space-y-3 text-lg">
-          
-        
 
-          <Link to="/dashboard" onClick={closeSidebar} className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-700 transition">
+
+          {
+            isAdmin && <Link to="/dashboard/A" onClick={closeSidebar} className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-700 transition">
             <FaHome className="text-yellow-400" />
             <span>Dashboard Home</span>
           </Link>
+          }
+
+          {
+            isemployee && <Link to="/dashboard/E" onClick={closeSidebar} className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-700 transition">
+            <FaHome className="text-yellow-400" />
+            <span>Dashboard Home</span>
+          </Link>
+          }
+          
+        
+
+          
        
          
 
